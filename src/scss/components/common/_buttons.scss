@@ -1,0 +1,46 @@
+.button {
+   position: relative;
+   display: inline-block;
+   border-radius: 100px;
+   padding: 13px 34px;
+   font-size: 20px;
+   line-height: 1.35;
+   text-align: center;
+   color: var(--color-white);
+   background-color: var(--color-primary);
+   transition: background-color 0.2s ease-out;
+
+   @media (any-hover: hover) {
+      &:hover {
+         background-color: #1e919b;
+      }
+   }
+}
+
+.burger {
+   --burger-width: 24px;
+   --burger-height: 18px;
+   --burger-color: var(--color-primary);
+
+   position: relative;
+   z-index: 5;
+
+   @include burger;
+}
+
+.cart-button {
+   position: relative;
+
+   &__quantity {
+      position: absolute;
+      right: -12px;
+      top: -6px;
+      border-radius: var(--border-value);
+      padding: 1px 5px;
+      font-weight: 700;
+      font-size: $font-size-x-small;
+      line-height: 1.333;
+      color: var(--color-white);
+      background-color: var(--color-red);
+   }
+}

@@ -1,0 +1,113 @@
+<header class="header">
+   <div class="container">
+      <div class="header__inner">
+         <div class="header__left">
+            <nav id="menu" class="header__menu menu">
+               <ul class="header__menu-list menu__list">
+                  <li class="header__menu-item menu__item">
+                     <a href="#" class="menu__link">Украшения</a>
+                     <button aria-expanded="false" class="menu__item-arrow btn-reset"></button>
+                     <ul class="menu__sublist menu-sublist">
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Браслеты
+                           </a>
+                        </li>
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Серьги
+                           </a>
+                        </li>
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Ожерелья
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="header__menu-item menu__item">
+                     <a href="#" class="menu__link">Мебель</a>
+                     <button aria-expanded="false" class="menu__item-arrow btn-reset"></button>
+                     <ul class="menu__sublist menu-sublist">
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Кровати
+                           </a>
+                        </li>
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Столы
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="header__menu-item menu__item">
+                     <a href="#" class="menu__link">Освещение</a>
+                     <button aria-expanded="false" class="menu__item-arrow btn-reset"></button>
+                     <ul class="menu__sublist menu-sublist">
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Светильники
+                           </a>
+                        </li>
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Лампы
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="header__menu-item menu__item">
+                     <a href="#" class="menu__link">Настенный декор</a>
+                     <button aria-expanded="false" class="menu__item-arrow btn-reset"></button>
+                     <ul class="menu__sublist menu-sublist">
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Металические вывески
+                           </a>
+                        </li>
+                        <li class="menu-sublist__item">
+                           <a tabindex="-1" href="#" class="menu-sublist__link">
+                              Картины
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
+            </nav>
+            <button aria-label="Главное меню" aria-expanded="false" aria-controls="menu" class="menu__burger burger btn-reset">
+               <span class="burger__line"></span>
+            </button>
+         </div>
+         <a href="#" class="header__logo logo">
+            <img src="./img/svg/logo.svg" alt="Логотип компании WLE" class="header__logo-image logo__image">
+         </a>
+         <div class="header__right">
+            <form action="#" class="header__right-item search-form">
+               <label class="search-form__label">
+                  <span class="visually-hidden">
+                     Введите поисковый запрос
+                  </span>
+                  <input placeholder="Поиск товаров" name="search" type="text" class="search-form__input input" required>
+                  <button class="search-form__button btn-reset">
+                     <svg aria-hidden="true" class="search-form__icon" style="width: 18px; height: 18px;">
+                        <use xlink:href="./img/sprite.svg#search"></use>
+                     </svg>
+                  </button>
+               </label>
+            </form>
+            <button class="header__right-item cart-button btn-reset">
+               <svg aria-hidden="true" class="cart-button__icon" style="width: 24px; height: 24px;">
+                  <use xlink:href="./img/sprite.svg#cart"></use>
+               </svg>
+               <span class="cart-button__quantity">2</span>
+            </button>
+            <button class="header__right-item user-button btn-reset">
+               <svg aria-hidden="true" class="user-button__icon" style="width: 24px; height: 24px;">
+                  <use xlink:href="./img/sprite.svg#user"></use>
+               </svg>
+            </button>
+         </div>
+      </div>
+   </div>
+</header>

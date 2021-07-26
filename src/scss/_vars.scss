@@ -1,0 +1,39 @@
+:root {
+   // ==!> Colors <!==
+   --color-black: #000;
+   --color-white: #fff;
+   --color-text: #070707;
+   --color-primary: #006d77;
+   --color-primary-rgb: 0, 109, 119;
+   --color-stroke: #70b1b7;
+   --color-snow: #f0f8f9;
+   --color-red: #c14d4d;
+   --color-orange: #e2a735;
+   --color-green: #42bb58;
+   --color-blue: #46a7e3;
+   --color-grey: #afbbbb;
+   --color-light-grey: #e8e8e8;
+
+   // font-family name
+   --font-family: "Nunito";
+
+   // blocks properties
+   --border-value: 100px;
+
+   // grid template layout
+   --grid-column: 80px;
+   --grid-gap: 30px;
+}
+
+// font size properties
+$font-size-title: 36px;
+$font-size-text: 18px;
+$font-size-large: 64px;
+$font-size-middle: 24px;
+$font-size-x-middle: 16px;
+$font-size-small: 14px;
+$font-size-x-small: 12px;
+
+// offsets
+$offset-middle: 30px;
+$offset-small: 20px;

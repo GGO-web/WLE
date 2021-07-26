@@ -1,0 +1,42 @@
+// @import "common/example";
+@import "common/buttons";
+@import "common/menu";
+@import "common/inputs";
+@import "common/search-form";
+
+// ==!> Most Common styles <!==
+.title {
+   position: relative;
+   margin: 0;
+   font-size: var(--font-size-title);
+
+   // @extend %font-title;
+}
+
+.text {
+   margin: 0;
+}
+
+.--hover-underline {
+   position: relative;
+   transition: color 0.15s ease-in-out;
+
+   &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: currentColor;
+      transition: width 0.15s ease-in-out;
+   }
+
+   @media (any-hover: hover) {
+      &:hover::before {
+         width: 100%;
+      }
+   }
+}
+
+// ==!> Most Common styles <!==

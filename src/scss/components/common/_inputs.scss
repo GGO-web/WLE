@@ -1,0 +1,14 @@
+.input {
+   border: 1px solid var(--color-primary);
+   border-radius: var(--border-value);
+   padding: 11px 48px 11px 20px;
+
+   &::placeholder {
+      color: var(--color-stroke);
+   }
+
+   &.focus-visible {
+      outline: none;
+      border-color: var(--color-stroke);
+   }
+}

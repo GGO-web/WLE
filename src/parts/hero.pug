@@ -1,0 +1,23 @@
+section.hero
+   .container
+      .hero__slider
+         .hero__slider-wrapper
+            - for (var i = 0; i < 3; i++)
+               .hero__slide
+                  .hero__slide-left
+                     .hero__slide-picture
+                        img.hero__slide-img(src="./img/hero/hero-img-1.jpg", alt="Кофейный столик на скидке 15%")
+                        span.hero__slide-discount
+                           | -15%
+                     .hero__slide-picture
+                        img.hero__slide-img(src="./img/hero/hero-img-1.jpg", alt="Кофейный столик на скидке 25%")
+                        span.hero__slide-discount
+                           | -25%
+                  .hero__slide-right
+                     h2.hero__slide-title.title
+                        | Скидки на кофейные и журнальные столики
+                     p.hero__slide-text.text
+                        | Будут хорошо смотреться в светлом интерьере
+                     button.hero__slide-button.button.btn-reset
+                        | Перейти в раздел
+         .hero__slider-pagination

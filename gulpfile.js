@@ -16,6 +16,7 @@ const image = require("gulp-image");
 const concat = require("gulp-concat");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
+const pug = require("gulp-pug");
 
 let buildReady = false;
 
@@ -122,6 +123,15 @@ const htmlInclude = () => {
       .pipe(browserSync.stream());
 };
 
+const pugCompile = () => {
+   return src(["./src/*.pug"])
+      .pipe(pug({
+         pretty: true
+      }))
+      .pipe(dest("./app"))
+      .pipe(browserSync.stream());
+};
+
 const watchFiles = () => {
    browserSync.init({
       server: {
@@ -133,6 +143,8 @@ const watchFiles = () => {
    watch("./src/js/**/*.js", scripts);
    watch("./src/parts/*.html", htmlInclude);
    watch("./src/*.html", htmlInclude);
+   watch("./src/parts/*.pug", pugCompile);
+   watch("./src/*.pug", pugCompile);
    watch("./src/resources/**", resources);
    watch("./src/img/*.{jpg,jpeg,png,svg,ico}", images);
    watch("./src/img/sprite/**.svg", svgSprite);
@@ -153,5 +165,5 @@ const toRelease = (done) => {
    done();
 };
 
-exports.default = series(clean, htmlInclude, scripts, styles, fonts, resources, images, svgSprites, watchFiles);
-exports.build = series(toRelease, clean, htmlInclude, scripts, styles, fonts, resources, images, svgSprites, htmlMinify);
+exports.default = series(clean, pugCompile, scripts, styles, fonts, resources, images, svgSprites, watchFiles);
+exports.build = series(toRelease, clean, pugCompile, scripts, styles, fonts, resources, images, svgSprites, htmlMinify);

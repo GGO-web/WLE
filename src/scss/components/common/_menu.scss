@@ -51,34 +51,12 @@
       vertical-align: middle;
       margin-left: 1px;
       width: 14px;
-      height: 14px;
+      height: 7px;
+      background-image: url("../img/svg/arrow.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
       transition: transform 0.2s ease-in-out;
-
-      &::before {
-         content: "";
-         position: absolute;
-         left: 3px;
-         top: 4px;
-         border-radius: 10px;
-         width: 7px;
-         height: 2px;
-         background-color: var(--color-primary);
-         transform: rotate(45deg);
-         transform-origin: top left;
-      }
-
-      &::after {
-         content: "";
-         position: absolute;
-         right: 3px;
-         top: 4px;
-         border-radius: 10px;
-         width: 7px;
-         height: 2px;
-         background-color: var(--color-primary);
-         transform: rotate(-45deg);
-         transform-origin: top right;
-      }
 
       &[aria-expanded="true"] {
          transform: rotate(180deg);
@@ -155,6 +133,11 @@
          align-items: stretch;
          margin-right: 0;
          width: 100%;
+
+         &-arrow {
+            width: 24px;
+            height: 24px;
+         }
 
          &:last-child {
             margin-bottom: 0;

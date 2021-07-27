@@ -1,9 +1,9 @@
 :root {
-   --header-height: 70px;
+   --header-height: 80px;
 }
 
 .header {
-   position: sticky;
+   position: fixed;
    left: 0;
    right: 0;
    top: 0;

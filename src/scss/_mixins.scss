@@ -4,3 +4,17 @@
 @import "./mixins/font-face";
 @import "./mixins/burger";
 @import "./mixins/eclipse";
+
+%font-title {
+   font-weight: 700;
+
+   @include responsive(font-size, $font-size-title, $font-size-middle, $xxl, $md);
+}
+
+%font-middle {
+   @include responsive(font-size, $font-size-middle, $font-size-x-middle, $xxl, $md);
+}
+
+%font-text {
+   @include responsive(font-size, $font-size-text, $font-size-x-middle, $xxl, $md);
+}

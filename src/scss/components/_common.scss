@@ -8,13 +8,15 @@
 .title {
    position: relative;
    margin: 0;
-   font-size: var(--font-size-title);
+   max-width: calc(4 * var(--grid-column) + 3 * var(--grid-gap));
 
-   // @extend %font-title;
+   @extend %font-title;
 }
 
 .text {
    margin: 0;
+
+   @extend %font-text;
 }
 
 .--hover-underline {
@@ -37,6 +39,10 @@
          width: 100%;
       }
    }
+}
+
+.main {
+   margin-top: var(--header-height);
 }
 
 // ==!> Most Common styles <!==

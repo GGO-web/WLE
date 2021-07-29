@@ -3,6 +3,7 @@
    --color-black: #000;
    --color-white: #fff;
    --color-text: #070707;
+   --color-blue-text: #003034;
    --color-primary: #006d77;
    --color-primary-rgb: 0, 109, 119;
    --color-stroke: #70b1b7;
@@ -36,5 +37,7 @@ $font-size-small: 14px;
 $font-size-x-small: 12px;
 
 // offsets
+$offset-large: 120px;
 $offset-middle: 30px;
 $offset-small: 20px;
+$offset-smallest: 10px;

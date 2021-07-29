@@ -1,0 +1,53 @@
+extends product_template.pug
+
+block products_vars
+   - var title = "Украшения";
+   - var type = "one-two-one"; //- "one-two" | "two-one" | "one-two-one"
+   -
+      var slides = [
+         {
+            "image": "./img/juwelry/juwelry-img-1.jpg",
+            "href": "#!",
+            "title": "Позолоченое ожерелье с вашими&nbsp;инициалами",
+            "currency": "₴",
+            "price": 2500,
+            "old_price": 5000,
+            "discount": 50,
+         },
+         {
+            "image": "./img/juwelry/juwelry-img-2.jpg",
+            "href": "#!",
+            "title": "Золотое ожерелье с вашими <br> инициалами",
+            "currency": "₴",
+            "price": 7800,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/juwelry/juwelry-img-3.jpg",
+            "href": "#!",
+            "title": "Бисерный браслет с <br> позолочеными&nbsp;элементами",
+            "currency": "₴",
+            "price": 700,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/juwelry/juwelry-img-4.jpg",
+            "href": "#!",
+            "title": "Набор золотых летних <br> браслетов",
+            "currency": "₴",
+            "price": 600,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/juwelry/juwelry-img-5.jpg",
+            "href": "#!",
+            "title": "Золотые обручальные кольца с <br> камнем",
+            "currency": "₴",
+            "price": 7500,
+            "old_price": 10000,
+            "discount": 25,
+         },
+      ];

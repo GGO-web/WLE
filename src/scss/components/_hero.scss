@@ -92,12 +92,9 @@
       position: absolute;
       left: -30px;
       top: -30px;
-      border-radius: var(--border-value);
       padding: 6px 16px;
-      font-weight: 700;
-      background-color: var(--color-red);
 
-      @extend %font-title;
+      @include responsive(font-size, $font-size-title, $font-size-middle, $xxl, $md);
    }
 
    &__slide-img {
@@ -122,17 +119,10 @@
       color: var(--color-primary);
       background-color: var(--color-white);
 
-      &::after {
-         content: "";
+      &-icon {
          display: inline-block;
          vertical-align: middle;
          margin-left: 16px;
-         width: 30px;
-         height: 17px;
-         background-image: url("../img/svg/arrow-long.svg");
-         background-position: center;
-         background-size: contain;
-         background-repeat: no-repeat;
          transition: transform 0.3s ease-in-out;
       }
 
@@ -141,7 +131,7 @@
             background-color: rgba(256, 256, 256, 0.9);
          }
 
-         &:hover::after {
+         &:hover .hero__slide-button-icon {
             transform: translateX(5px);
          }
       }

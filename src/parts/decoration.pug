@@ -1,0 +1,44 @@
+extends product_template.pug
+
+block products_vars
+   - var title = "Настенный декор";
+   - var type = "one-two"; //- "one-two" | "two-one" | "one-two-one"
+   -
+      var slides = [
+         {
+            "image": "./img/decoration/decoration-img-1.jpg",
+            "href": "#!",
+            "title": "Абстрактная картина <br> «Мрамор»",
+            "currency": "₴",
+            "price": 12000,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/decoration/decoration-img-2.jpg",
+            "href": "#!",
+            "title": "Обрамленная картина. <br> Абстрактные&nbsp;цветы",
+            "currency": "₴",
+            "price": 1900,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/decoration/decoration-img-3.jpg",
+            "href": "#!",
+            "title": "Металические вывески с вашим <br> дизайном",
+            "currency": "₴",
+            "price": 2500,
+            "old_price": null,
+            "discount": null,
+         },
+            {
+            "image": "./img/decoration/decoration-img-4.jpg",
+            "href": "#!",
+            "title": "Парные картина на стену <br> «Cactus»",
+            "currency": "₴",
+            "price": 300,
+            "old_price": 200,
+            "discount": 30,
+         },
+      ];

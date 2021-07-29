@@ -1,0 +1,44 @@
+extends product_template.pug
+
+block products_vars
+   - var title = "Мебель";
+   - var type = "one-two"; //- "one-two" | "two-one" | "one-two-one"
+   -
+      var slides = [
+         {
+            "image": "./img/popular/popular-img-2.jpg",
+            "href": "#!",
+            "title": "Очень длинное название товара <br> «Green&nbsp;B»",
+            "currency": "₴",
+            "price": 14500,
+            "old_price": 16200,
+            "discount": 10,
+         },
+         {
+            "image": "./img/popular/popular-img-1.jpg",
+            "href": "#!",
+            "title": "Изголовье кровати с заливкой эпоксидной&nbsp;смолой «Wide&nbsp;Beach»",
+            "currency": "₴",
+            "price": 21780,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/furniture/furniture-img-1.jpg",
+            "href": "#!",
+            "title": "Стол из эпоксидной смолы <br> «Island»",
+            "currency": "₴",
+            "price": 23000,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/furniture/furniture-img-2.jpg",
+            "href": "#!",
+            "title": "Круглый журнальный столик с&nbsp;заливкой&nbsp;эпоксидной&nbsp;смолой",
+            "currency": "₴",
+            "price": 6000,
+            "old_price": 7500,
+            "discount": 20,
+         },
+      ];

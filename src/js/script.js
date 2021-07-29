@@ -8,3 +8,16 @@ const vhCalculate = () => {
 vhCalculate();
 
 window.addEventListener("resize", vhCalculate);
+
+const formattedPrice = (price) => {
+   return String(price).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1\u00A0");
+}
+
+function parsePrices() {
+   const prices = document.querySelectorAll(`*[class*="price"]:not([class*="prices"])`);
+
+   prices.forEach(price => {
+      price.innerText = formattedPrice(price.innerText);
+   });
+}
+parsePrices();

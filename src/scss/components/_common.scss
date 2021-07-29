@@ -45,4 +45,13 @@
    margin-top: var(--header-height);
 }
 
+.discount {
+   border-radius: var(--border-value);
+   padding: 4px 14px;
+   font-weight: 700;
+   font-size: $font-size-small;
+   color: var(--color-white);
+   background-color: var(--color-red);
+}
+
 // ==!> Most Common styles <!==

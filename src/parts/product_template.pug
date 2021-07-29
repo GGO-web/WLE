@@ -1,0 +1,74 @@
+include mixin
+
+block products_vars
+   - var title = "Название Товаров";
+   - var type = "two-one"; //- | "one-two"
+   -
+      var slides = [
+         {
+            "image": "./img/popular/popular-img-1.jpg",
+            "href": "#!",
+            "title": "Название №1",
+            "currency": "₴",
+            "price": 18800,
+            "old_price": null,
+            "discount": 10,
+         },
+         {
+            "image": "./img/popular/popular-img-2.jpg",
+            "href": "#!",
+            "title": "Название №2",
+            "currency": "₴",
+            "price": 19800,
+            "old_price": null,
+            "discount": 15,
+         },
+         {
+            "image": "./img/popular/popular-img-3.jpg",
+            "href": "#!",
+            "title": "Название №3",
+            "currency": "₴",
+            "price": 20800,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/popular/popular-img-4.jpg",
+            "href": "#!",
+            "title": "Название №4",
+            "currency": "₴",
+            "price": 21800,
+            "old_price": 23098,
+            "discount": null,
+         },
+      ];
+
+block content
+   section.products
+      .container
+         .products__inner
+            .products__head
+               h2.products__title.title !{title}
+               button.products__load.btn-reset
+                  | Показать еще
+                  +svg("products__load-icon", "arrow-long", "width: 20px; height: 1ex; fill: currentColor;")
+            .products__slider
+               .products__slider-wrapper(data-type=type)
+                  each slide in slides
+                     article.products__slide
+                        .products__slide-header
+                           a.products__slide-link(href=slide.href)
+                              img.products__slide-img(src=slide.image alt="")
+                           if (slide.discount)
+                              span.products__slide-discount.discount -#{slide.discount}%
+                           button.products__favorite.favorite.btn-reset(aria-label="Add to favorite")
+                              +svg("products__favorite-icon", "heart", "width: 20px; height: 18px; stroke: #fff; fill: none;")
+                        .products__slide-footer
+                           h3.products__slide-title
+                              a.products__slide-link(href=slide.href) !{slide.title}
+                           .products__slide-prices
+                              span.products__slide-price #{slide.price}&nbsp;#{slide.currency}
+                              if (slide.old_price)
+                                 span.products__slide-oldprice #{slide.old_price}&nbsp;#{slide.currency}
+
+

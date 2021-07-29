@@ -1,0 +1,44 @@
+extends product_template.pug
+
+block products_vars
+   - var title = "Популярные изделия";
+   - var type = "two-one"; //- "one-two" | "two-one" | "one-two-one"
+   -
+      var slides = [
+         {
+            "image": "./img/popular/popular-img-1.jpg",
+            "href": "#!",
+            "title": "Изголовье кровати с заливкой эпоксидной смолой «Wide&nbsp;Beach»",
+            "currency": "₴",
+            "price": 21780,
+            "old_price": 35000,
+            "discount": null,
+         },
+         {
+            "image": "./img/popular/popular-img-2.jpg",
+            "href": "#!",
+            "title": "Кофейный столик с заливкой эпоксидной&nbsp;смолой «Green&nbsp;B»",
+            "currency": "₴",
+            "price": 14500,
+            "old_price": 16200,
+            "discount": 10,
+         },
+         {
+            "image": "./img/popular/popular-img-3.jpg",
+            "href": "#!",
+            "title": "Изумрудный эпоксидный стол «Green&nbsp;Galaxy»",
+            "currency": "₴",
+            "price": 21800,
+            "old_price": null,
+            "discount": null,
+         },
+         {
+            "image": "./img/popular/popular-img-4.jpg",
+            "href": "#!",
+            "title": "Консольный стол, гостинная мебель&nbsp;«Wide&nbsp;B»",
+            "currency": "₴",
+            "price": 22700,
+            "old_price": null,
+            "discount": null,
+         },
+      ];

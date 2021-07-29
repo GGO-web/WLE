@@ -1,0 +1,16 @@
+section.newsletter
+   .container
+      .newsletter__inner
+         h2.newsletter__title.title
+            | Новые изделия и акции
+         p.newsletter__text.text.
+            Подписывайтесь на рассылку с новостями о новых изделиях
+            и скидками на товары из вашего списка желаний
+         form.newsletter__form(action="#")
+            label.newsletter__form-label(for="newsletter-input")
+               | Ваша электронная почта
+            .newsletter__form-group
+               input.newsletter__form-input.input#newsletter-input(type="mail" name="email", required)
+               button.newsletter__form-button.button.btn-reset
+                  | Подписаться
+

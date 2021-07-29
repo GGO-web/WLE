@@ -16,6 +16,10 @@
       color: var(--color-blue-text);
    }
 
+   &__title {
+      margin-right: $offset-small;
+   }
+
    &__slider-wrapper {
       @media (min-width: $sm) {
          display: grid;
@@ -123,6 +127,10 @@
    }
 
    &__load {
+      min-width: 130px;
+
+      @include responsive(font-size, $font-size-xx-middle, $font-size-x-small, $xs, $min);
+
       &-icon {
          transition: transform 0.3s ease-in-out;
       }

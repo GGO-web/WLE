@@ -16,5 +16,5 @@
 }
 
 %font-text {
-   @include responsive(font-size, $font-size-text, $font-size-x-middle, $xxl, $md);
+   @include responsive(font-size, $font-size-text, $font-size-xx-middle, $xxl, $md);
 }

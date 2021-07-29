@@ -168,6 +168,8 @@
    }
 
    @media (max-width: $sm) {
+      background-attachment: scroll;
+
       &__slide-img {
          max-height: 160px;
       }

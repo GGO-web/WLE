@@ -1,0 +1,58 @@
+.newsletter {
+   background-color: var(--color-snow);
+
+   &__inner {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      max-width: calc(8 * var(--grid-column) + 7 * var(--grid-gap));
+
+      @include responsive(margin-top, 60px, $offset-small, $xxl, $sm);
+      @include responsive(margin-bottom, 60px, $offset-small, $xxl, $sm);
+   }
+
+   &__title {
+      margin: 0 auto $offset-small;
+      text-align: center;
+      color: var(--color-blue-text);
+   }
+
+   &__text {
+      margin: 0 auto $offset-middle;
+      max-width: calc(5 * (var(--grid-column) + var(--grid-gap)));
+      text-align: center;
+      color: var(--color-blue-text);
+   }
+
+   &__form-label {
+      margin-bottom: 4px;
+      margin-left: $offset-small;
+      color: var(--color-stroke);
+      cursor: text;
+   }
+
+   &__form-group {
+      display: flex;
+   }
+
+   &__form-input {
+      flex: 1 1 100%;
+      margin-right: $offset-small;
+      border-color: var(--color-stroke);
+
+      &.focus-visible {
+         border-color: var(--color-primary);
+      }
+   }
+
+   @media (max-width: $sm) {
+      &__form-group {
+         flex-direction: column;
+      }
+
+      &__form-input {
+         margin-right: 0;
+         margin-bottom: $offset-small;
+      }
+   }
+}

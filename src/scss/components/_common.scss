@@ -8,7 +8,7 @@
 .title {
    position: relative;
    margin: 0;
-   max-width: calc(4 * var(--grid-column) + 3 * var(--grid-gap));
+   max-width: calc(4 * (var(--grid-column) + var(--grid-gap)));
 
    @extend %font-title;
 }

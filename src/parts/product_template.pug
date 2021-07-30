@@ -58,11 +58,11 @@ block content
                      article.products__slide
                         .products__slide-header
                            a.products__slide-link(href=slide.href, target="_blank")
-                              img.products__slide-img(src=slide.image alt="Картинка слайда")
+                              img.products__slide-img.lazy(data-src=slide.image alt="Картинка слайда")
                            if (slide.discount)
                               span.products__slide-discount.discount -#{slide.discount}%
                            button.products__favorite.favorite.btn-reset(aria-label="Добавить в избранное")
-                              +svg("products__favorite-icon", "heart", "width: 20px; height: 18px; stroke: #fff; fill: none;")
+                              +svg("products__favorite-icon", "heart", "width: 20px; height: 18px; stroke: #fff;")
                         .products__slide-footer
                            h3.products__slide-title
                               a.products__slide-link(href=slide.href, target="_blank") !{slide.title}

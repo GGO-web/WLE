@@ -21,3 +21,6 @@ function parsePrices() {
    });
 }
 parsePrices();
+
+const lazyLoad = new LazyLoad();
+lazyLoad.update();

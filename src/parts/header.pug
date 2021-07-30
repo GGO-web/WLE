@@ -52,7 +52,7 @@ header.header
             button.menu__burger.burger.btn-reset(aria-label='Главное меню' aria-expanded='false' aria-controls='menu')
                span.burger__line
          a.header__logo.logo(href='#')
-            img.header__logo-image.logo__image(src='./img/svg/logo.svg' alt='Логотип компании WLE')
+            +svg("header__logo-img logo__image", "logo", "width: 64px; height: 32px; fill: var(--color-primary);")
          .header__right
             form.header__right-item.search-form(action='#')
                label.search-form__label

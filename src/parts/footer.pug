@@ -1,0 +1,73 @@
+include mixin
+
+footer.footer
+   .container
+      .footer__inner
+         .footer__social
+            a.footer__logo.logo(href="#")
+               +svg("footer__logo-img.logo__image", "logo", "width: 64px; height: 32px; fill: var(--color-white);")
+            ul.footer__social-list
+               li.footer__social-item
+                  a.footer__social-link(href="#")
+                     +svg("footer__social-icon", "instagram", "width: 20px; height: 20px;")
+               li.footer__social-item
+                  a.footer__social-link(href="#")
+                     +svg("footer__social-icon", "telegram", "width: 20px; height: 20px;")
+               li.footer__social-item
+                  a.footer__social-link(href="#")
+                     +svg("footer__social-icon", "viber", "width: 20px; height: 20px;")
+               li.footer__social-item
+                  a.footer__social-link(href="#")
+                     +svg("footer__social-icon", "whatsapp", "width: 20px; height: 20px;")
+            small.footer__copy
+               | ©WLE Все права защищены
+         nav.footer__nav.footer-nav
+            .footer-nav__item
+               h3.footer-nav__item-title
+                  | Категории
+               ul.footer-nav__list
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Мебель
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Освещение
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Украшения
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Настенный декор
+            .footer-nav__item
+               h3.footer-nav__item-title
+                  | Личный кабинет
+               ul.footer-nav__list
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Личный кабинет
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Мои заказы
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Список желаний
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Просмотренные товары
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Мои отзывы
+            .footer-nav__item
+               h3.footer-nav__item-title
+                  | О нас
+               ul.footer-nav__list
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") О компании
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Изделия на заказ
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Контакты
+                  li.footer-nav__list-item
+                     a.footer-nav__list-link(href="#!") Доставка и оплата
+         .footer__contacts
+            .footer__contacts-item
+               span.footer__contacts-text Звоните по телефону:
+               a.footer__contacts-type(href="tel:+0676767676")
+                  | Kyivstar:&nbsp;067-67-67-676
+               a.footer__contacts-type(href="tel:+0676767676")
+                  | Vodafone:&nbsp;067-67-67-676
+            .footer__contacts-item
+               span.footer__contacts-text Пишите на почту:
+               a.footer__contacts-type(href="mailto:wleproduction@gmail.com")
+                  | wleproduction@gmail.com

@@ -58,6 +58,7 @@ header.header
                label.search-form__label
                   span.visually-hidden
                      | Введите поисковый запрос
+                  button.search-form__close.btn-reset(type="button") Закрыть поиск
                   input.search-form__input.input#search-input(placeholder='Поиск товаров' name='search' type='text' required)
                button.search-form__button.btn-reset(aria-label="Искать товар")
                   +svg("search-form__icon", "search", "width: 18px; height: 18px; fill: none; stroke: var(--color-primary);")

@@ -137,7 +137,7 @@ body {
    font-family: var(--font-family), sans-serif;
    font-weight: 400;
    -webkit-font-smoothing: antialiased;
-   font-size: var(--font-size-text);
+   font-size: $font-size-text;
    line-height: calc(22 / 18);
    text-rendering: optimizeLegibility;
    color: var(--color-text);

@@ -158,7 +158,7 @@ const watchFiles = () => {
    watch("./src/js/**/*.js", scripts);
    watch("./src/parts/*.html", htmlInclude);
    watch("./src/*.html", htmlInclude);
-   watch("./src/parts/*.pug", pugCompile);
+   watch("./src/parts/**/*.pug", pugCompile);
    watch("./src/*.pug", pugCompile);
    watch("./src/resources/**", resources);
    watch("./src/img/*.{jpg,jpeg,png,svg,ico}", images);

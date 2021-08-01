@@ -31,34 +31,37 @@ window.addEventListener("click", (event) => {
 
    if (clickedElement && clickedElement.classList.contains("menu__item-arrow")) {
       const sublistElement = clickedElement.nextElementSibling;
+      const links = sublistElement.querySelectorAll(".menu-sublist__link");
       sublistElement.classList.toggle("is-active");
 
       if (sublistElement.classList.contains("is-active")) {
          clickedElement.setAttribute("aria-expanded", "true");
          sublistElement.style.maxHeight = sublistElement.scrollHeight + "px";
+
+         links.forEach(link => link.removeAttribute("tabindex"));
       } else {
          clickedElement.setAttribute("aria-expanded", "false");
          sublistElement.style.maxHeight = null;
+
+         links.forEach(link => link.setAttribute("tabindex", "-1"));
       }
    } else {
       menuItemArrows.forEach(itemArrow => {
          const sublistElement = itemArrow.nextElementSibling;
+         const links = sublistElement.querySelectorAll(".menu-sublist__link");
          sublistElement.classList.remove("is-active");
 
          if (sublistElement.classList.contains("is-active")) {
             itemArrow.setAttribute("aria-expanded", "true");
             sublistElement.style.maxHeight = sublistElement.scrollHeight + "px";
+
+            links.forEach(link => link.removeAttribute("tabindex"));
          } else {
             itemArrow.setAttribute("aria-expanded", "false");
             sublistElement.style.maxHeight = null;
+
+            links.forEach(link => link.setAttribute("tabindex", "-1"));
          }
       });
    }
 });
-
-menuItemArrows.forEach(itemArrow => {
-   itemArrow.addEventListener("click", (event) => {
-
-   });
-})
-

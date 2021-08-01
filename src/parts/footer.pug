@@ -1,23 +1,23 @@
-include mixin
+include basic/mixin
 
 footer.footer
    .container
       .footer__inner
          .footer__social
-            a.footer__logo.logo(href="#")
+            a.footer__logo.logo(href="#", aria-label="Логотип WLE")
                +svg("footer__logo-img.logo__image", "logo", "width: 64px; height: 32px; fill: var(--color-white);")
             ul.footer__social-list
                li.footer__social-item
-                  a.footer__social-link(href="#")
+                  a.footer__social-link(href="#", aria-label="Инстаграм")
                      +svg("footer__social-icon", "instagram", "width: 20px; height: 20px;")
                li.footer__social-item
-                  a.footer__social-link(href="#")
+                  a.footer__social-link(href="#", aria-label="Телеграм")
                      +svg("footer__social-icon", "telegram", "width: 20px; height: 20px;")
                li.footer__social-item
-                  a.footer__social-link(href="#")
+                  a.footer__social-link(href="#", aria-label="Вайбер")
                      +svg("footer__social-icon", "viber", "width: 20px; height: 20px;")
                li.footer__social-item
-                  a.footer__social-link(href="#")
+                  a.footer__social-link(href="#", aria-label="Ватсапп")
                      +svg("footer__social-icon", "whatsapp", "width: 20px; height: 20px;")
             small.footer__copy
                | ©WLE Все права защищены
@@ -53,7 +53,7 @@ footer.footer
                   | О нас
                ul.footer-nav__list
                   li.footer-nav__list-item
-                     a.footer-nav__list-link(href="#!") О компании
+                     a.footer-nav__list-link(href="about.html") О компании
                   li.footer-nav__list-item
                      a.footer-nav__list-link(href="#!") Изделия на заказ
                   li.footer-nav__list-item

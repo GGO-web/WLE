@@ -1,0 +1,11 @@
+extends parts/basic/head.pug
+
+block head_vars
+   - var title = "WLE - О нас";
+
+block content
+   include parts/header
+   main.main
+      include parts/sections/about
+   include parts/newsletter
+   include parts/footer

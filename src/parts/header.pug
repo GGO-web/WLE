@@ -1,4 +1,4 @@
-include mixin
+include basic/mixin
 
 header.header
    .container
@@ -51,7 +51,7 @@ header.header
                               | Картины
             button.menu__burger.burger.btn-reset(aria-label='Главное меню' aria-expanded='false' aria-controls='menu')
                span.burger__line
-         a.header__logo.logo(href='#')
+         a.header__logo.logo(href='#', aria-label="Логотип WLE")
             +svg("header__logo-img logo__image", "logo", "width: 64px; height: 32px; fill: var(--color-primary);")
          .header__right
             form.header__right-item.search-form(action='#')

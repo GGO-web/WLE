@@ -1,13 +1,20 @@
 "use strict";
 
+const header = document.querySelector(".header");
+const headerHeight = header.offsetHeight;
+
 const vhCalculate = () => {
    const vh = window.innerHeight * 0.01;
    document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
 vhCalculate();
+document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
 
-window.addEventListener("resize", vhCalculate);
+window.addEventListener("resize", () => {
+   vhCalculate();
+   document.documentElement.style.setProperty("--header-height", `${headerHeight}px`);
+});
 
 const formattedPrice = (price) => {
    return String(price).replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1\u00A0");

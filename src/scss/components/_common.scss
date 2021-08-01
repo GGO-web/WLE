@@ -8,6 +8,7 @@
 .title {
    position: relative;
    margin: 0;
+   margin-bottom: 40px;
    max-width: calc(4 * (var(--grid-column) + var(--grid-gap)));
 
    @extend %font-title;
@@ -53,6 +54,11 @@
    font-size: $font-size-small;
    color: var(--color-white);
    background-color: var(--color-red);
+}
+
+.list {
+   list-style-type: disc;
+   padding-left: 25px;
 }
 
 // ==!> Most Common styles <!==

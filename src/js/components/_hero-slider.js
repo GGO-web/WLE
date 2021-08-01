@@ -7,6 +7,10 @@ const heroSlider = new Swiper(".hero__slider", {
    fadeEffect: {
       crossFade: true
    },
+   autoplay: {
+      delay: 5000,
+   },
+   disableOnInteraction: true,
    loop: true,
    allowTouchMove: false,
    noSwiping: true,
@@ -34,3 +38,15 @@ const heroSlider = new Swiper(".hero__slider", {
       },
    },
 });
+
+const heroElement = document.querySelector(".hero");
+
+if (heroElement) {
+   heroElement.addEventListener("mousemove", function(event) {
+      heroSlider.autoplay.stop();
+
+      setTimeout(() => {
+         heroSlider.autoplay.start();
+      }, 2000);
+   })
+}

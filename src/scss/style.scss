@@ -8,10 +8,16 @@
 
 // ==!> Site Components <!==
 
+// global
 @import "./components/header";
-@import "./components/hero";
-@import "./components/products";
 @import "./components/newsletter";
 @import "./components/footer";
+
+// index.html
+@import "./components/hero";
+@import "./components/products";
+
+// about.html
+@import "./components/about";
 
 // ==!> Site Components <!==

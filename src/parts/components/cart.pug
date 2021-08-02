@@ -1,0 +1,23 @@
+div.cart
+   button.header__cart-button.cart__button-open.btn-reset(aria-label="Открыть корзину")
+      +svg("cart-button__icon", "cart", "width: 24px; height: 24px; fill: none; stroke: var(--color-primary);")
+      span.cart-button__quantity 2
+   .cart__modal(aria-modal="true", role="dialog")
+      .cart__top
+         h2.cart__title корзина
+         button.cart__button-close.btn-reset(aria-label="Закрыть корзину")
+      ul.cart__list
+         li.cart__item
+            article.cart__product
+               .cart__product-preview
+                  img.cart__product-img(src="./img/popular/popular-img-1.jpg" alt="Епоксидный столик")
+                  .cart__product-content
+                     h3.cart__product-title Круглый журнальный столик с заливкой эпоксидной смолой
+                     include stepper
+               .cart__product-prices
+                  span.cart__oldprice 7500 ₴
+                  span.cart__price 6000 ₴
+      .cart__bottom
+         span.cart__fullprice
+            | Итого: 6200 ₴
+         button.cart__send.button.btn-reset Оформить заказ

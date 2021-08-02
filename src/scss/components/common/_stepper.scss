@@ -1,0 +1,86 @@
+.stepper {
+   position: relative;
+   display: inline-flex;
+   align-items: center;
+
+   &__counter {
+      appearance: textfield;
+      border: 1px solid var(--color-stroke);
+      padding: 4px 20px;
+      width: 100%;
+      height: 100%;
+      font-size: $font-size-xx-middle;
+      line-height: 100%;
+      text-align: center;
+
+      &.focus-visible {
+         outline: none;
+         border: 1px solid var(--color-primary);
+      }
+
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+         display: none;
+      }
+   }
+
+   &__down {
+      margin-right: 8px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         display: inline-block;
+         border-radius: 5px;
+         width: 10px;
+         height: 2px;
+         background-color: currentColor;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__up {
+      margin-left: 8px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         display: inline-block;
+         border-radius: 5px;
+         width: 10px;
+         height: 2px;
+         background-color: currentColor;
+         transform: translate(-50%, -50%);
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         display: inline-block;
+         border-radius: 5px;
+         width: 2px;
+         height: 10px;
+         background-color: currentColor;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__up, &__down {
+      position: relative;
+      width: 18px;
+      height: 18px;
+      color: var(--color-stroke);
+      background-color: var(--color-white);
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: var(--color-primary);
+         }
+      }
+   }
+}

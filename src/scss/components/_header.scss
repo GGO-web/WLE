@@ -46,6 +46,12 @@
       }
    }
 
+   &__cart-button {
+      position: relative;
+      z-index: 5;
+      margin-right: $offset-middle;
+   }
+
    @media (max-width: $lg) {
       &__logo {
          margin: 0 40px;

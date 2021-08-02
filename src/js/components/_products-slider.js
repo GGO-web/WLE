@@ -1,14 +1,14 @@
 const productsSliders = document.querySelectorAll(".products__slider");
 
 for (let productsSlider of productsSliders) {
-   function initSwiper(slider) {
-      let productsSlider;
+   let productSlider;
 
-      let screenWidth = window.innerWidth;
+   function initSwiper(slider) {
+      const screenWidth = window.innerWidth;
       const breakpoint = 576;
 
-      if (screenWidth < (1 + breakpoint) && !productsSlider) {
-         productsSlider = new Swiper(slider, {
+      if (screenWidth < (1 + breakpoint) && !productSlider) {
+         productSlider = new Swiper(slider, {
             // Optional parameters
             loop: false,
             speed: 500,
@@ -21,9 +21,9 @@ for (let productsSlider of productsSliders) {
             slideNextClass: "products__slide-next",
             slidePrevClass: "products__slide-prev",
          });
-      } else if (screenWidth > breakpoint && productsSlider) {
-         productsSlider.destroy();
-         productsSlider = undefined;
+      } else if (screenWidth > breakpoint && slider.classList.contains("swiper-container-initialized")) {
+         productSlider.destroy();
+         productSlider = undefined;
       }
    }
 
@@ -31,7 +31,7 @@ for (let productsSlider of productsSliders) {
    initSwiper(productsSlider);
 
    //Swiper plugin initialization on window resize
-   window.addEventListener("resize", function (productsSlider) {
+   window.addEventListener("resize", function () {
       initSwiper(productsSlider);
    });
 }

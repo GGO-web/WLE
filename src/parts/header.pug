@@ -61,8 +61,6 @@ header.header
                   input.search-form__input.input#search-input(placeholder='Поиск товаров' name='search' type='text' required)
                button.search-form__button.btn-reset(aria-label="Искать товар")
                   +svg("search-form__icon", "search", "width: 18px; height: 18px; fill: none; stroke: var(--color-primary);")
-            button.header__right-item.cart-button.btn-reset(aria-label="Корзина")
-               +svg("cart-button__icon", "cart", "width: 24px; height: 24px; fill: none; stroke: var(--color-primary);")
-               span.cart-button__quantity 2
+            include components/cart
             button.header__right-item.user-button.btn-reset(aria-label="Личный кабинет")
                +svg("user-button__icon", "user", "width: 24px; height: 24px; fill: none; stroke: var(--color-primary);")

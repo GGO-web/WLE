@@ -698,6 +698,76 @@ body {
       .stepper__up:hover, .stepper__down:hover {
         color: var(--color-primary); } }
 
+.preloader {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100 * var(--vh));
+  background-color: var(--color-white);
+  transition: opacity 0.5s linear, visibility 0.5 linear; }
+  .preloader__wrapper {
+    position: relative; }
+    @media (min-width: 1320px) {
+      .preloader__wrapper {
+        padding: 100px; } }
+    @media (min-width: 576px) and (max-width: 1320px) {
+      .preloader__wrapper {
+        padding: calc(20px + 80 * ((100vw - 576px) / 744)); } }
+    @media (max-width: 576px) {
+      .preloader__wrapper {
+        padding: 20px; } }
+    .preloader__wrapper::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      display: inline-block;
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      background-color: var(--color-blue);
+      opacity: 0.8;
+      filter: blur(30px);
+      mix-blend-mode: hard-light;
+      transform: translate(-50%, -50%); }
+  .preloader__icon {
+    display: inline-block;
+    max-width: 100%;
+    fill: rgba(var(--color-primary-rgb), 0.4);
+    stroke: var(--color-blue-text);
+    stroke-dasharray: 600;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 0.5px;
+    animation: 4s linear 0s infinite alternate-reverse drawing forwards; }
+  .preloader.is-disable {
+    opacity: 0;
+    visibility: hidden; }
+
+@-webkit-keyframes drawing {
+  from {
+    fill: rgba(var(--color-primary-rgb), 0.4);
+    stroke-dashoffset: 800; }
+  to {
+    fill: rgba(var(--color-primary-rgb), 0.1);
+    stroke-dashoffset: 0; } }
+
+@keyframes drawing {
+  from {
+    fill: rgba(var(--color-primary-rgb), 0.4);
+    stroke-dashoffset: 800; }
+  to {
+    fill: rgba(var(--color-primary-rgb), 0.1);
+    stroke-dashoffset: 0; } }
+
 .title {
   position: relative;
   margin: 0;

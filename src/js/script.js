@@ -42,3 +42,14 @@ parsePrices();
 
 const lazyLoad = new LazyLoad();
 lazyLoad.update();
+
+const preloaderIcon = document.querySelector(".preloader__icon")
+preloaderIcon.setAttribute("viewBox", "0 0 64 34");
+
+document.addEventListener("DOMContentLoaded", () => {
+   const preloader = document.querySelector(".preloader");
+
+   setTimeout(() => {
+      preloader.classList.add("is-disable");
+   }, 4000);
+})
